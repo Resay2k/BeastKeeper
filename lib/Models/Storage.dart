@@ -1,0 +1,1 @@
+/* This class will be used to store data locally through shared pref */

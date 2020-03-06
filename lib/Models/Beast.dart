@@ -1,0 +1,1 @@
+/* class to represent beast obj */
