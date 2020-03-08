@@ -62,6 +62,7 @@ class _AddBeastViewState extends State<AddBeastView> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
@@ -99,35 +100,37 @@ class _AddBeastViewState extends State<AddBeastView> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.start,
+
           children: <Widget>[
 
             Container(
               margin: const EdgeInsets.only(top: 16.0),
               child: Stack(
                 children: <Widget>[
-                  CircleAvatar(
-                    radius: 80,
-                    backgroundColor: Colors.grey,
-                    child: _image == null
-                        ? IconTheme(
-                          data: IconThemeData(
-                              color: Colors.white,
-                              size: 80),
-                          child: new Icon(Icons.image),
-                        )
-                        : Image.file(_image),
+                  _image == null
+                    ? CircleAvatar(
+                      radius: 80,
+                      backgroundColor: Colors.grey,
+                      child: IconTheme(
+                        data: IconThemeData(
+                          color: Colors.white,
+                          size: 80),
+                        child: new Icon(Icons.image),
+                      )
+                    )
+                    : Image.file(_image),
+
+                  Positioned(
+                      bottom: -5,
+                      right:-5,
+                      child: FloatingActionButton(
+                        heroTag: "btn2",
+                        child: Icon(Icons.add_a_photo),
+                        onPressed: () {
+                           _getImage();},
+                      )
                   ),
-                    Positioned(
-                        bottom: -5,
-                        right:-5,
-                        child: FloatingActionButton(
-                          heroTag: "btn2",
-                          child: Icon(Icons.add_a_photo),
-                          onPressed: () {
-                             _getImage();},
-                        )
-                    ),
-                  ],
+                ],
                 overflow: Overflow.visible,
               ),
             ),
