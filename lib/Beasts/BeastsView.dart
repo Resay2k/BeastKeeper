@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:beast_keeper/AddBeast/AddBeastView.dart';
 
 class BeastsView extends StatefulWidget {
   BeastsView({Key key, this.title}) : super(key: key);
@@ -30,6 +31,15 @@ class _BeastsViewState extends State<BeastsView> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+  }
+
+  void _openAddBeastView(){
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => AddBeastView()),
+    );
+
   }
 
   @override
@@ -77,7 +87,7 @@ class _BeastsViewState extends State<BeastsView> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _openAddBeastView,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
