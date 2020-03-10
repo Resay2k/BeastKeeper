@@ -17,6 +17,7 @@ class _BeastsWidgetState extends State<BeastsWidget> implements BeastsView {
   BeastsPresenter _presenter;
   List<dynamic> _beasts;
 
+  //TODO: check if this called when navigated back to from AddBeast
   @override
   void initState() {
     // load function will request list beasts from sharedpref
