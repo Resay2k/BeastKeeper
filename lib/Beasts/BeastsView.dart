@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:beast_keeper/AddBeast/AddBeastView.dart';
+import 'package:beast_keeper/AddBeast/AddBeastWidget.dart';
 
 class BeastsView extends StatefulWidget {
   BeastsView({Key key, this.title}) : super(key: key);
@@ -37,7 +37,7 @@ class _BeastsViewState extends State<BeastsView> {
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => AddBeastView()),
+      MaterialPageRoute(builder: (context) => AddBeastWidget()),
     );
 
   }

@@ -26,6 +26,11 @@ dependencies:
 
   image_picker: 0.6.3+4
 
+  path_provider: 1.6.5
+
+  shared_preferences: any
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
