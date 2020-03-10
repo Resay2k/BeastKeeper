@@ -27,8 +27,6 @@ class Storage {
 //    prefs = SharedPreferences.getInstance();
 //  }
 
-
-
   void saveBeast(_beast) async {
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -49,7 +47,6 @@ class Storage {
       prefs.setString('beastList', beastListJSON);
     }
   }
-
 
   Future<List<dynamic>> getBeasts() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

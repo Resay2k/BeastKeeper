@@ -5,6 +5,7 @@ class Beast {
   String _info;
   String _imagePath;
 
+
   String get name => _name;
 
   set name(String value) {
@@ -23,16 +24,15 @@ class Beast {
     _info = value;
   }
 
-
   String get imagePath => _imagePath;
 
   set imagePath(String value) {
     _imagePath = value;
   }
 
-
   Beast();
 
+  // used by json.encode in Storage.dart
   Map<String, dynamic> toJson() =>
       {
         'name': _name,
@@ -41,10 +41,10 @@ class Beast {
         'imagePath': _imagePath
       };
 
+  // used by json.decode in Storage.dart
   Beast.fromJson(Map<String, dynamic> json)
       : _name = json['name'],
         _age = json['age'],
         _info = json['info'],
         _imagePath = json['imagePath'];
-
 }

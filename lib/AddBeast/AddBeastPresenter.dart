@@ -1,9 +1,8 @@
-/* this class will act as a mediator between the view and data */
 import 'package:beast_keeper/AddBeast/AddBeastView.dart';
 import 'package:beast_keeper/Models/Beast.dart';
 import 'package:beast_keeper/Models/Storage.dart';
 
-
+/* this class will act as a mediator between the view and data */
 class AddBeastPresenter {
   AddBeastView _view;
 
