@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:beast_keeper/Beasts/BeastsView.dart';
+import 'package:beast_keeper/Beasts/BeastsWidget.dart';
 
 /* entry point to the app */
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.pink,
       ),
-      home: new BeastsView(title: 'Flutter Demo Home Page'),
+      home: new BeastsWidget(title: 'Flutter Demo Home Page'),
     );
   }
 }

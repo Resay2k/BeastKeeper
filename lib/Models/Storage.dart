@@ -5,6 +5,8 @@ import 'package:path/path.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:beast_keeper/Models/Beast.dart';
+import 'dart:developer';
+
 
 //TODO; make class singleton instead of creating multiple sharedpref instances
 
@@ -43,8 +45,15 @@ class Storage {
       List <dynamic> beasts = jsonDecode(prefs.getString('beastList'));
       beasts.add(_beast);
       String beastListJSON = jsonEncode(beasts);
+      log('beasts: $beastListJSON');
       prefs.setString('beastList', beastListJSON);
     }
+  }
+
+
+  Future<List<dynamic>> getBeasts() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return jsonDecode(prefs.getString('beastList'));
   }
 
 

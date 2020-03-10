@@ -39,13 +39,11 @@ class _AddBeastWidgetState extends State<AddBeastWidget>
   bool _infoError = false;
 
 
+
   @override
   void initState() {
     this.widget._presenter.attachView(this);
   }
-
-  @override
-  void doNothing(){}
 
   // response to
   void _getImage() {
@@ -76,6 +74,7 @@ class _AddBeastWidgetState extends State<AddBeastWidget>
           _image.path);
     }
 
+    // go back to main widget
     Navigator.pop(context);
   }
 

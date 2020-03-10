@@ -3,6 +3,5 @@
 
 abstract class AddBeastView {
 
-  void doNothing();
 
 }

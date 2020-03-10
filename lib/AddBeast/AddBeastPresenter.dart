@@ -2,7 +2,6 @@
 import 'package:beast_keeper/AddBeast/AddBeastView.dart';
 import 'package:beast_keeper/Models/Beast.dart';
 import 'package:beast_keeper/Models/Storage.dart';
-import 'dart:io';
 
 
 class AddBeastPresenter {
