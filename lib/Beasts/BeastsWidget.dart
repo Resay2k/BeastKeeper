@@ -34,22 +34,11 @@ class _BeastsWidgetState extends State<BeastsWidget> implements BeastsView {
         ..load();
   }
 
+
   @override
   void showBeasts(beasts){
     setState(() {
       _beasts = beasts;
-    });
-  }
-
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-//      _counter++;
     });
   }
 
@@ -109,7 +98,6 @@ class _BeastsWidgetState extends State<BeastsWidget> implements BeastsView {
        ),
       floatingActionButton: FloatingActionButton(
         onPressed: _openAddBeastView,
-        tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

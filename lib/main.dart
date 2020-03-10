@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.pink,
       ),
-      home: new BeastsWidget(title: 'Flutter Demo Home Page'),
+      home: new BeastsWidget(title: 'My Beasts'),
     );
   }
 }

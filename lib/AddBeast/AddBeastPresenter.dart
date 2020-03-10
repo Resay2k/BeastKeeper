@@ -19,5 +19,6 @@ class AddBeastPresenter {
         ..imagePath = _imagePath;
 
     Storage().saveBeast(beast);
+
   }
 }
